@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Generator</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/Gaming.css" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+   <header>
+     <h1><a href="index.html">FREE ROBUX GENERATOR</a></h1>
+  </header>
+  <nav>
+    <ul>
+	  <li><a href="index.html">Home</a></li>
+    <li><a href="generator.html">Generator</a></li> 
+    <li><a href="about.html">About</a></li>
+    <li><a href="human.html">Human Verification</a></li>
+	</ul>
+  </nav>
+  <main>
+    <div id="generator">
+      <div class="container">
+      <button id="generateButton">Generate ROBUX</button></div>
+      <div id="loading-container">
+        <div id="loading-bar"></div>
+    </div>
+    <div id="scam-text" style="display: none;">
+      ERORR HUMAN VERIFICATION FAILED, PLEASE PRESS THE HUMAN VERIFICATION BUTTON TO CONTINUE!
+  </div>
+    </div>
+    <script>document.addEventListener('DOMContentLoaded', function() {
+      var generateButton = document.getElementById('generateButton');
+      var loadingContainer = document.getElementById('loading-container');
+      var loadingBar = document.getElementById('loading-bar');
+      var completionText = document.getElementById('scam-text');
+  
+      generateButton.addEventListener('click', function() {
+          loadingContainer.style.display = 'block';
+          loadingBar.style.width = '0%'; 
+          loadingBar.innerHTML = '0%'; 
+          completionText.style.display = 'none';
+  
+          var width = 0;
+          var interval = setInterval(function() {
+              if (width >= 99) {
+                  clearInterval(interval);
+                  loadingBar.style.width = '99%';
+                  loadingBar.innerHTML = '99%';
+                  completionText.style.display = 'block';
+              } else {
+                  width++;
+                  loadingBar.style.width = width + '%';
+                  loadingBar.innerHTML = width + '%';
+              }
+          }, 30); 
+      });
+  });</script>
+  </main>
+  <footer>
+Copyright &copy; 2024 FreeRobux INC.<br>
+<a href="mailto:yourfirstname@yourlastname.com">Cohen@Hopkins.com</a>
+  </footer>
+</div>
+</body>
+</html>

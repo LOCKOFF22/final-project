@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Human Verification</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/Gaming.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Freeman&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+   <header>
+     <h1><a href="index.html">FREE ROBUX GENERATOR</a></h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="generator.html">Generator</a></li> 
+      <li><a href="about.html">About</a></li>
+      <li><a href="human.html">Human Verification</a></li>
+	</ul>
+  </nav>
+  <main>
+    <div id="herojobs">
+    </div>
+    <h2 class="freeman-regular">Human Verification</h2>
+	<p class="freeman-regular">Please fill out the form below to prove that you are a human. No money will be taken out of your credit card.</p>
+  <form method="post" action ="https://webdevbasics.net/scripts/demo.php" id="jobForm">
+    <label for="myName">Name:</label>
+    <input type="text" name="myName" id="myName" required>
+    <label for="myLastName">Last Name:</label>
+    <input type="text" name="myLastName" id="myLastName" required>
+    <label for="myEmail">E-mail:</label>
+    <input type="text" name="myEmail" id="myEmail" required>
+    <label for="Creditcard">Credit Card Information VERY IMPORTANT:</label>
+    <input type="text" name="Creditcard" id="Creditcard" required>
+    <label for="myComments">Comments:</label>
+    <textarea id="myComments" name="myComments" rows="2" cols="20" required></textarea>
+    <input type="submit" id="mySumbit" value="submit">
+  </form>
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('jobForm');
+
+    form.addEventListener('submit', function(event) {
+        const inputs = form.querySelectorAll('input[required], textarea[required]');
+        let allFilled = true;
+
+        inputs.forEach(function(input) {
+            if (!input.value.trim()) {
+                allFilled = false;
+                input.classList.add('error');
+            } else {
+                input.classList.remove('error');
+            }
+        });
+
+        if (!allFilled) {
+            event.preventDefault();
+            alert('Please fill out all required fields.');
+        }
+    });
+});</script>
+  </main>
+  <footer>
+    
+Copyright &copy; 2024 FreeRobux INC.<br>
+<a href="mailto:yourfirstname@yourlastname.com">Cohen@Hopkins.com</a>
+  </footer>
+</div>
+</body>
+</html>
